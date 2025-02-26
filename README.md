@@ -1,2 +1,4 @@
 # College and Student Management System 
-A repository comprising of the development of a system managing a college and its respective students, demonstrating a sound understanding of one-to-many relationships, database management and data manipulation/sorting/filtering, form validation, and Bootstrap, using Laravel 10.x in fulfillment of the Server Side Scripting unit.
+## Steps covered so far
+- ```git checkout -b b1-database-setup```
+- ```composer create-project laravel/laravel=10 college-sys-swd62a2025```
