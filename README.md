@@ -45,3 +45,9 @@
 - Switch control to the ```college_system``` database via the command ```USE college_system;```.
 - Check that the colleges table resides in said database via the command ```SHOW TABLES;```.
 - Use the ```DESCRIBE students;``` command to check that all attributes have been specified with their respective constraints.
+
+### Models
+- ```php artisan make:model Student```
+- ```use App\Models\College;```
+- ```protected $fillable = ['name', 'email', 'phone', 'dob', 'college_id'];```
+- ```public function college() { return $this->belongsTo(College::class); }```
