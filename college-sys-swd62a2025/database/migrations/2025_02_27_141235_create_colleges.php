@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /** 
-     * When up() is executed (via the command ```php artisan migrate```), the below table structure will be created within the college_system database.
-     * Apart from the built-in attributes such as id and timestaps (created_at and updated_at), 
+     * When ```up()``` is executed (via the command ```php artisan migrate```), the below table structure will be created within the college_system database.
+     * Apart from the built-in attributes such as ```id()``` and ```timestamps()``` (```created_at``` and ```updated_at```), 
      * two user-defined non-nullable attributes, the college name and the address in which the college is based, have been included. */
     public function up(): void
     {
