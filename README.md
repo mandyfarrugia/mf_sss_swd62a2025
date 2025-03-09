@@ -50,4 +50,9 @@
 - ```php artisan make:model Student```
 - ```use App\Models\College;```
 - ```protected $fillable = ['name', 'email', 'phone', 'dob', 'college_id'];```
-- ```public function college() { return $this->belongsTo(College::class); }```
+- Establish a one-to-many relationship between colleges and students as follows:
+```
+public function college() { 
+return $this->belongsTo(College::class); 
+}
+```
