@@ -39,3 +39,9 @@
     - ```$table->string('phone', 8)->nullable(false);``` (The second argument represents the maximum accepted characters of a string value to be stored into this attribute, which in this case was restricted to 8 as per phone number format standards)
     - ```$table->date('dob')->nullable(false);```
     - ```$table->foreignId('college_id')->constrained()->onDelete('cascade');``` (```cascade``` in this case denotes that when a college record is erased, then so are all its associated students as well)
+
+##### Check that migration was successful
+- Launch a new Git Bash terminal and run the command ```sudo mysql -u root -p```.
+- Switch control to the ```college_system``` database via the command ```USE college_system;```.
+- Check that the colleges table resides in said database via the command ```SHOW TABLES;```.
+- Use the ```DESCRIBE students;``` command to check that all attributes have been specified with their respective constraints.
