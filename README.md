@@ -16,3 +16,7 @@
 - Assign ```DB_DATABASE``` to ```college_system```.
 - Assign ```DB_USERNAME``` to ```mandyfarrugia```.
 - Assign ```DB_PASSWORD``` to ```password```.
+
+### Migrations
+#### Migration dedicated to college entity
+- ```php artisan make:migration create_colleges```
