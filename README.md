@@ -20,7 +20,7 @@
 ### Migrations
 #### Migration dedicated to college entity
 - ```php artisan make:migration create_colleges```
-- Within ```up()```, specify two user-defined attributes as follows:
+- Within ```up()``` > ```Schema::create('colleges', function (Blueprint $table)```, specify two user-defined attributes as follows:
     - ```$table->string('name')->nullable(false)->unique();``` (rather self-explanatory, represents the name of the college)
     - ```$table->string('address')->nullable(false);``` (represents where the college is based)
 - Run ```php artisan migrate``` to inflict changes to the database schema in the light of the migration file comprising of instructions to embody a college entity.
@@ -30,3 +30,12 @@
 - Switch control to the ```college_system``` database via the command ```USE college_system;```.
 - Check that the colleges table resides in said database via the command ```SHOW TABLES;```.
 - Use the ```DESCRIBE colleges;``` command to check that all attributes have been specified with their respective constraints.
+
+#### Migration dedicated to student entity
+- ```php artisan make:migration create_students```
+- Within ```up()``` > ```Schema::create('colleges', function (Blueprint $table)```, specify the following user-defined attributes:
+    - ```$table->string('name')->nullable(false);```
+    - ```$table->string('email')->nullable(false)->unique();```
+    - ```$table->string('phone', 8)->nullable(false);``` (The second argument represents the maximum accepted characters of a string value to be stored into this attribute, which in this case was restricted to 8 as per phone number format standards)
+    - ```$table->date('dob')->nullable(false);```
+    - ```$table->foreignId('college_id')->constrained()->onDelete('cascade');``` (```cascade``` in this case denotes that when a college record is erased, then so are all its associated students as well)

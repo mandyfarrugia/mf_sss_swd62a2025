@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->nullable(false)->unique();
             $table->string('phone', 8)->nullable(false); //Second argument restricts text length to a maximum of 8 characters instead of the traditional 255 character limit.
             $table->date('dob')->nullable(false);
-            $table->foreignId('college_id')->constrained()->onDelete('cascade');
+            $table->foreignId('college_id')->constrained()->onDelete('cascade'); //First step towards establishing an association between students and a college. cascade denotes that if a college record is deleted, all student records associated with that college will also be deleted.
             $table->timestamps();
         });
     }
