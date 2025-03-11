@@ -47,12 +47,24 @@
 - Use the ```DESCRIBE students;``` command to check that all attributes have been specified with their respective constraints.
 
 ### Models
+#### Creating the Student model
 - ```php artisan make:model Student```
 - ```use App\Models\College;```
 - ```protected $fillable = ['name', 'email', 'phone', 'dob', 'college_id'];```
-- Establish a one-to-many relationship between colleges and students as follows:
-```
-public function college() { 
-return $this->belongsTo(College::class); 
-}
-```
+- Establish a one-to-many relationship between colleges and students by indicating that a student can be asssociated with a college as follows:
+    ```
+    public function college() { 
+        return $this->belongsTo(College::class); 
+    }
+    ```
+
+#### Creating the College model
+- ```php artisan make:model College```
+- ```use App\Models\Student;```
+- ```protected $fillable = ['name', 'address'];```
+- Establish a one-to-many relationship between colleges and students by indicating that a college can enroll many students as follows:
+    ```
+    public function students(): HasMany {
+        return $this->hasMany(Student::class);
+    }
+    ```
