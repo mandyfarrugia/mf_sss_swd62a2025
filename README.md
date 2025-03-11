@@ -68,3 +68,22 @@
         return $this->hasMany(Student::class);
     }
     ```
+
+### Initial data using Tinker
+
+#### Initialising a new college instance
+- ```use App\Models\College;```
+- ```$uom = new College();```
+- ```$uom->name = "University of Malta";```
+- ```$uom->address = "University of Malta, Msida MSD 2080, Malta";```
+- ```$uom->save();```
+
+#### Enrolling new student into existing college
+- ```$uom = College::where('name', 'University of Malta')->first();```
+- ```use App\Models\Student;```
+- ```$student = new Student();```
+- ```$student->name = "Mandy Farrugia";```
+- ```$student->email = "mandy.farrugia.c10352@mcast.edu.mt";```
+- ```$student->phone = "99819288";```
+- ```$student->dob = "2001-12-05";```
+- ```$uom->students()->save($student);```
