@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\College;
 use Illuminate\Http\Request;
 
 class CollegeController extends Controller
 {
-    public function index() {
-        return view('colleges.index');
+    public function index()  {
+        $colleges = College::orderBy('name', 'asc');
+        return view("colleges.index", compact("colleges"));
     }
 
     public function create() {}
