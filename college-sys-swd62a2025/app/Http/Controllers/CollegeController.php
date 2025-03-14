@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CollegeController extends Controller
 {
     public function index()  {
-        $colleges = College::orderBy('name', 'asc');
+        $colleges = College::orderBy('name', 'asc')->get();
         return view("colleges.index", compact("colleges"));
     }
 
