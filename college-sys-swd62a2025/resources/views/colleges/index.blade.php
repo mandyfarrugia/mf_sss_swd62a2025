@@ -5,15 +5,9 @@
             <div class="page-header">
                 <div class="card w-100">
                     <div class="card-header">
-                        <div class="card-title">Responsive Table</div>
+                        <div class="card-title">Colleges</div>
                     </div>
                     <div class="card-body">
-                        <div class="card-sub">
-                            Create responsive tables by wrapping any table with
-                            <code class="highlighter-rouge">.table-responsive</code>
-                            <code class="highlighter-rouge">DIV</code> to make them
-                            scroll horizontally on small devices
-                        </div>
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>

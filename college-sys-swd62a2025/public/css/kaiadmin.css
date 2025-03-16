@@ -648,16 +648,17 @@ body {
         .sidebar .nav > .nav-item.submenu > li > a i, .sidebar[data-background-color="white"] .nav > .nav-item.submenu > li > a i {
           color: rgba(23, 125, 255, 0.76); }
       .sidebar .nav > .nav-item a, .sidebar[data-background-color="white"] .nav > .nav-item a {
-        display: flex;
-        align-items: center;
-        color: #575962;
-        padding: 6px 25px;
-        width: 100%;
-        font-size: 1rem;
-        font-weight: 400;
-        position: relative;
-        margin-bottom: 3px;
-        text-decoration: none !important; }
+        display: flex
+        ;
+            align-items: center;
+            color: #575962;
+            padding: 6px 25px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 400;
+            position: relative;
+            margin-bottom: 3px;
+            text-decoration: none !important; }
         .sidebar .nav > .nav-item a:hover, .sidebar .nav > .nav-item a:focus, .sidebar[data-background-color="white"] .nav > .nav-item a:hover, .sidebar[data-background-color="white"] .nav > .nav-item a:focus {
           text-decoration: none; }
           .sidebar .nav > .nav-item a:hover p, .sidebar .nav > .nav-item a:focus p, .sidebar[data-background-color="white"] .nav > .nav-item a:hover p, .sidebar[data-background-color="white"] .nav > .nav-item a:focus p {

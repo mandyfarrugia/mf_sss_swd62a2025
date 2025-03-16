@@ -14,3 +14,7 @@
     --bs-btn-disabled-bg: #1b2341;
     --bs-btn-disabled-border-color: #1b2341;
 }
+
+.quick-actions-header {
+    background-color: #1a2035 !important;
+}
