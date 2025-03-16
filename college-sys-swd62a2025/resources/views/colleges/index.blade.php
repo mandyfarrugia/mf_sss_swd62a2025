@@ -29,14 +29,14 @@
                                             <td>{{ $college->name }}</td>
                                             <td>{{ $college->address }}</td>
                                             <td>
-                                                <div class="btn-group" role="group" aria-label="Basic example">
-                                                    <button type="button" class="btn btn-primary">
+                                                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                                    <button type="button" class="btn btn-action">
                                                         <i class="fa-regular fa-eye"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-primary">
+                                                    <button type="button" class="btn btn-action">
                                                         <i class="fa-regular fa-pen-to-square"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-primary">
+                                                    <button type="button" class="btn btn-danger">
                                                         <i class="fa-regular fa-circle-xmark"></i>
                                                     </button>
                                                 </div>
