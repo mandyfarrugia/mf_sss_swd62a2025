@@ -5,7 +5,13 @@
             <div class="page-header">
                 <div class="card w-100">
                     <div class="card-header">
-                        <div class="card-title">Colleges</div>
+                        <div class="card-title">
+                            <span>Colleges</span>
+                            <button class="btn btn-success btn-sm mx-2">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Add</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -24,13 +30,13 @@
                                             <td>{{ $college->address }}</td>
                                             <td>
                                                 <div class="btn-group w-100" role="group" aria-label="Basic example">
-                                                    <button type="button" class="btn btn-action">
+                                                    <button type="button" class="btn btn-action btn-sm">
                                                         <i class="fa-regular fa-eye"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-action">
+                                                    <button type="button" class="btn btn-action btn-sm">
                                                         <i class="fa-regular fa-pen-to-square"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-danger">
+                                                    <button type="button" class="btn btn-danger btn-sm">
                                                         <i class="fa-regular fa-circle-xmark"></i>
                                                     </button>
                                                 </div>
