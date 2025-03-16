@@ -14,6 +14,7 @@
                         </div>
                     </div>
                     <div class="card-body">
+                        @if($colleges->count())
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
@@ -30,15 +31,15 @@
                                             <td>{{ $college->address }}</td>
                                             <td>
                                                 <div class="btn-group w-100" role="group" aria-label="Basic example">
-                                                    <button type="button" class="btn btn-action btn-sm">
+                                                    <a href="{{ route('colleges.show', $college->id)  }}" class="btn btn-action btn-sm">
                                                         <i class="fa-regular fa-eye"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-action btn-sm">
+                                                    </a>
+                                                    <a class="btn btn-action btn-sm">
                                                         <i class="fa-regular fa-pen-to-square"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-danger btn-sm">
+                                                    </a>
+                                                    <a class="btn btn-danger btn-sm">
                                                         <i class="fa-regular fa-circle-xmark"></i>
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -46,6 +47,9 @@
                                 </tbody>
                             </table>
                         </div>
+                        @else
+                            <p>No colleges found!</p>
+                        @endif
                     </div>
                 </div>
             </div>
