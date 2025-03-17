@@ -22,3 +22,9 @@
 ul {
     list-style-type: none !important;
 }
+
+#college_map {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 500px;
+    width: 100%;
+}

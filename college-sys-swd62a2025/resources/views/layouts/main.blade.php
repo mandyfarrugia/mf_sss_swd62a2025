@@ -92,13 +92,13 @@
                             <div class="collapse" id="college">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="components/avatars.html">
-                                            <span class="sub-item">All Colleges</span>
+                                        <a href="{{ route('colleges.index') }}">
+                                            <span class="sub-item">View all Colleges</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="components/buttons.html">
-                                            <span class="sub-item">Add New College</span>
+                                            <span class="sub-item">Add new College</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -120,12 +120,12 @@
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="components/avatars.html">
-                                            <span class="sub-item">All students</span>
+                                            <span class="sub-item">View all Students</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="components/buttons.html">
-                                            <span class="sub-item">Add New Student</span>
+                                            <span class="sub-item">Add new Student</span>
                                         </a>
                                     </li>
                                 </ul>
