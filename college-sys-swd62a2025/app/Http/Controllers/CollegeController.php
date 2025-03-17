@@ -22,7 +22,11 @@ class CollegeController extends Controller
         return view('colleges.show', compact('collegeById'));
     }
 
-    public function create() {}
+    public function create() {
+        $college = new College(); //Instantiate a new empty instance of College to represent a new entry. This will then be populated with the data supplied by the user.
+        return view('colleges.create', compact('college'));
+    }
+
     public function store(Request $request) {}
     public function edit($id) {}
     public function update($id, Request $request) {}
