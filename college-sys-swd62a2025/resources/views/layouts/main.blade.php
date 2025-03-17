@@ -97,7 +97,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="components/buttons.html">
+                                        <a href="{{ route('colleges.create') }}">
                                             <span class="sub-item">Add new College</span>
                                         </a>
                                     </li>
