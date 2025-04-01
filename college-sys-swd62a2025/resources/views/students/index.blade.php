@@ -33,7 +33,7 @@
                                             <td>{{ $student->email }}</td>
                                             <td>
                                                 <div class="btn-group w-100" role="group" aria-label="Basic example">
-                                                    <a href="{{ route('colleges.show', $college->id)  }}" class="btn btn-action btn-sm">
+                                                    <a href="" class="btn btn-action btn-sm">
                                                         <i class="fa-regular fa-eye"></i>
                                                     </a>
                                                     <a class="btn btn-action btn-sm">
