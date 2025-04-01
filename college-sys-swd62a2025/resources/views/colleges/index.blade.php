@@ -7,10 +7,10 @@
                     <div class="card-header">
                         <div class="card-title">
                             <span>Colleges</span>
-                            <button class="btn btn-success btn-sm mx-2">
+                            <a class="btn btn-success btn-sm mx-2" href="{{ route('colleges.create') }}">
                                 <i class="fa-solid fa-plus"></i>
                                 <span>Add</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="card-body">

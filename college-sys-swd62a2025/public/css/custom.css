@@ -28,3 +28,7 @@ ul {
     height: 500px;
     width: 100%;
 }
+
+a.btn-success {
+    color: #fff !important;
+}

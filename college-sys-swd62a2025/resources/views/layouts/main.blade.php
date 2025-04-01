@@ -274,12 +274,6 @@
         <!-- jQuery Sparkline -->
         <script src="{{ asset('js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
 
-        <!-- Bootstrap Notify -->
-        <script src="{{ asset('js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
-
-        <!-- Sweet Alert -->
-        <script src="{{ asset('js/plugin/sweetalert/sweetalert.min.js') }}"></script>
-
         <!-- Kaiadmin JS -->
         <script src="{{ asset('js/kaiadmin.min.js') }}"></script>
 
