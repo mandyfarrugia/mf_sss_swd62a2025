@@ -18,10 +18,10 @@ class StudentController extends Controller
         $studentById = Student::find($id);
 
         if(!$studentById) {
-            return redirect()->route('colleges.index')->with('error', 'We were unable to find a college with the ID you provided. It may be possible that the ID is incorrect or the college no longer exists in our records.');
+            return redirect()->route('students.index')->with('error', 'We were unable to find a student with the ID you provided. It may be possible that the ID is incorrect or the college no longer exists in our records.');
         }
 
-        return view('students.show', compact('collegeById'));
+        return view('students.show', compact('studentById'));
     }
 
     public function create() {
