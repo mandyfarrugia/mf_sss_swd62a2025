@@ -42,7 +42,16 @@ class CollegeController extends Controller
         return redirect()->route('colleges.index')->with('message', 'College has been added successfully');
     }
 
-    public function edit($id) {}
+    public function edit() {
+        $collegeById = College::find(request('id'));
+
+        if(!$collegeById) {
+            return redirect()->route('colleges.index')->with('error', 'We were unable to find a college with the ID you provided. It may be possible that the ID is incorrect or the college no longer exists in our records.');
+        }
+
+        return view('colleges.edit', compact('collegeById'));
+    }
+
     public function update($id, Request $request) {}
     public function destroy($id) {}
 }
