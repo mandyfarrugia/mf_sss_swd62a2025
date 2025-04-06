@@ -41,7 +41,7 @@
                                                             class="btn btn-action btn-sm">
                                                             <i class="fa-regular fa-eye"></i>
                                                         </a>
-                                                        <a class="btn btn-action btn-sm">
+                                                        <a class="btn btn-action btn-sm" href="{{ route('students.edit', $student->id) }}">
                                                             <i class="fa-regular fa-pen-to-square"></i>
                                                         </a>
                                                         <a class="btn btn-danger btn-delete btn-sm">

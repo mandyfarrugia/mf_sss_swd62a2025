@@ -54,7 +54,7 @@ class CollegeController extends Controller
 
     public function update($id, Request $request) {
         $request->validate([
-            'name' => 'required|unique:colleges,name',
+            'name' => 'required|unique:colleges,name,' . $id,
             'address' => 'required'
         ], 
         [
