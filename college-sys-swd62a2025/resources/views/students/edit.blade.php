@@ -29,7 +29,7 @@
                             <form action="{{ route('colleges.update', $studentById->id) }}" method="post">
                                 @csrf
                                 @method('PUT')
-                                @include('colleges._edit_form')
+                                @include('students._edit_form')
                             </form>
                         </div>
                     </div>
