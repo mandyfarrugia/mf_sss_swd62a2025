@@ -50,7 +50,7 @@ class StudentController extends Controller
         ]);
 
         Student::create($request->all());
-        return redirect()->route('contacts.index')->with('message', 'Contact has been added successfully');
+        return redirect()->route('students.index')->with('success', 'Student added successfully!');
     }
 
     public function edit($id) {}
