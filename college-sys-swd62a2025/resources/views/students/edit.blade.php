@@ -15,7 +15,7 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Add new student</a>
+                        <a href="#">Edit student</a>
                     </li>
                 </ul>
             </div>
@@ -23,12 +23,12 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Register a new student</div>
+                            <div class="card-title">Edit existing student</div>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('students.store') }}" method="post">
+                            <form action="{{ route('colleges.update', $studentById->id) }}" method="post">
                                 @csrf
-                                @include('students._create_form')
+                                <!-- @include('colleges._edit_form') -->
                             </form>
                         </div>
                     </div>
