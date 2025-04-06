@@ -39,7 +39,7 @@ class CollegeController extends Controller
         ]);
 
         College::create($request->all());
-        return redirect()->route('colleges.index')->with('message', 'College has been added successfully');
+        return redirect()->route('colleges.index')->with('message', 'College added successfully');
     }
 
     public function edit() {
@@ -52,6 +52,22 @@ class CollegeController extends Controller
         return view('colleges.edit', compact('collegeById'));
     }
 
-    public function update($id, Request $request) {}
+    public function update($id, Request $request) {
+        $request->validate([
+            'name' => 'required|unique:colleges,name',
+            'address' => 'required'
+        ], 
+        [
+            'name.required' => 'Please enter the name of the college!',
+            'name.unique' => 'A college with the same name already exists!',
+            'address.required' => 'Please enter a valid address!',
+        ]);
+
+        $college = College::find($id);
+        $college->update($request->all());
+
+        return redirect()->route('colleges.index')->with('message', 'College updated successfully!');
+    }
+
     public function destroy($id) {}
 }
