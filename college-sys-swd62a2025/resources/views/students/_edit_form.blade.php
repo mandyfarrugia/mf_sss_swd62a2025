@@ -62,7 +62,7 @@
         </div>
         <div class="form-group">
             <a class="btn btn-action" href="{{ route('students.index') }}">Back to Students</a>
-            <a class="btn btn-success" href="{{ route('students.store') }}">Submit</a>
+            <input class="btn btn-success" type="submit" value="Submit"/>
         </div>
     </div>
 </div>
