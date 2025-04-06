@@ -24,8 +24,7 @@ class CollegeController extends Controller
 
     public function create() {
         $college = new College(); //Instantiate a new empty instance of College to represent a new entry. This will then be populated with the data supplied by the user.
-        dd(route('colleges.create'));
-        //return view('colleges.create', compact('college'));
+        return view('colleges.create', compact('college'));
     }
 
     public function store(Request $request) {}
