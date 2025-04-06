@@ -55,7 +55,7 @@ class StudentController extends Controller
     }
 
     public function edit($id) {
-        $studentById = College::find(request('id'));
+        $studentById = Student::find(request('id'));
 
         if(!$studentById) {
             return redirect()->route('students.index')->with('error', 'We were unable to find a student with the ID you provided. It may be possible that the ID is incorrect or the student no longer exists in our records.');
