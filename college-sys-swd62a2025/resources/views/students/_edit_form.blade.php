@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" value="{{ old('name') }}"
+            <input type="text" value="{{ old('name', $student->name) }}"
                 class="form-control @error('name') is-invalid @enderror" id="name"
                 placeholder="Enter the student's full name" name="name" />
             @error('name')
@@ -12,8 +12,8 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" value="{{ old('email') }}"
+            <label for="address">Email</label>
+            <input type="email" value="{{ old('email', $student->email) }}"
                 class="form-control @error('email') is-invalid @enderror" id="email"
                 placeholder="Enter an email address" name="email" />
             @error('email')
@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="text" value="{{ old('phone') }}"
+            <input type="text" value="{{ old('phone', $student->phone) }}"
                 class="form-control @error('phone') is-invalid @enderror" id="phone" placeholder="Enter an phone number"
                 name="phone" />
             @error('phone')
@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
             <label for="dob">Date of birth</label>
-            <input type="date" value="{{ old('dob') }}"
+            <input type="date" value="{{ old('dob', $student->dob) }}"
                 class="form-control @error('dob') is-invalid @enderror" id="dob" placeholder="Enter the date of birth"
                 name="dob" />
             @error('dob')

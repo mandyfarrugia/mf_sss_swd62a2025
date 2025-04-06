@@ -28,7 +28,7 @@
                         <div class="card-body">
                             <form action="{{ route('colleges.update', $studentById->id) }}" method="post">
                                 @csrf
-                                <!-- @include('colleges._edit_form') -->
+                                @include('colleges._edit_form')
                             </form>
                         </div>
                     </div>
