@@ -72,6 +72,6 @@ class CollegeController extends Controller
     public function destroy($id) {
         $college = College::find($id);
         $college->delete();
-        return back()->with('message', 'College deleted successfully!');
+        return back()->with('success', 'College deleted successfully!');
     }
 }
