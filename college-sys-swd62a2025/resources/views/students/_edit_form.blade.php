@@ -61,7 +61,7 @@
             @enderror
         </div>
         <div class="form-group">
-            <a class="btn btn-action" href="{{ route('students.index') }}">Back to Colleges</a>
+            <a class="btn btn-action" href="{{ route('students.index') }}">Back to Students</a>
             <a class="btn btn-success" href="{{ route('students.store') }}">Submit</a>
         </div>
     </div>
