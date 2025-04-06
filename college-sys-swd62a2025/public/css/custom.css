@@ -1,0 +1,34 @@
+.btn-action {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #1a2035 !important;
+    --bs-btn-border-color: #1a2035 !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1b2341;
+    --bs-btn-hover-border-color: #1b2341;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #1b2341;
+    --bs-btn-active-border-color: #1b2341;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #1b2341;
+    --bs-btn-disabled-border-color: #1b2341;
+}
+
+.quick-actions-header {
+    background-color: #1a2035 !important;
+}
+
+ul {
+    list-style-type: none !important;
+}
+
+#college_map {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 500px;
+    width: 100%;
+}
+
+a.btn-success {
+    color: #fff !important;
+}
