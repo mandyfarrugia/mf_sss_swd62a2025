@@ -32,3 +32,7 @@ ul {
 a.btn-success {
     color: #fff !important;
 }
+
+#entity-delete-form {
+    display: none;
+}

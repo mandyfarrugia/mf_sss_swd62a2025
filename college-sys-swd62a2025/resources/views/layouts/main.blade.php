@@ -264,19 +264,13 @@
                 </div>
             </footer>
         </div>
+        <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/core/jquery-3.7.1.min.js') }}"></script>
         <script src="{{ asset('js/core/popper.min.js') }}"></script>
         <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
-
-        <!-- jQuery Scrollbar -->
         <script src="{{ asset('js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
-
-        <!-- jQuery Sparkline -->
         <script src="{{ asset('js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
-
-        <!-- Kaiadmin JS -->
         <script src="{{ asset('js/kaiadmin.min.js') }}"></script>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
