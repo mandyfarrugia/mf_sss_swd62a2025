@@ -30,7 +30,29 @@ class StudentController extends Controller
         return view('students.create', compact('colleges', 'student'));
     }
 
-    public function store(Request $request) {}
+    public function store(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:students,name',
+            'phone' => 'required|max:8',
+            'dob' => 'required',
+            'college_id' => 'required|exists:colleges,id'
+        ], 
+        [
+            'name.required' => 'Please enter the name of the college!',
+            'email.required' => 'Please enter a valid email address!',
+            'email.email' => 'Please enter the email address in the correct format!',
+            'email.unique' => 'This email is already associated with another student!',
+            'phone.required' => 'Please enter a phone number!',
+            'phone.max' => 'Please make sure that the phone number is in the correct format!',
+            'dob.required' => 'Please make sure to enter the date of birth!',
+            'college_id.required' => 'Please select a college!'
+        ]);
+
+        Student::create($request->all());
+        return redirect()->route('students.index')->with('success', 'Student added successfully!');
+    }
+
     public function edit($id) {}
     public function update($id, Request $request) {}
     public function destroy($id) {}
