@@ -55,15 +55,15 @@ class StudentController extends Controller
     }
 
     public function edit($id) {
-        $studentById = College::find(request('id'));
+        $studentById = Student::find(request('id'));
 
         if(!$studentById) {
-            return redirect()->route('colleges.index')->with('error', 'We were unable to find a student with the ID you provided. It may be possible that the ID is incorrect or the student no longer exists in our records.');
+            return redirect()->route('students.index')->with('error', 'We were unable to find a student with the ID you provided. It may be possible that the ID is incorrect or the student no longer exists in our records.');
         }
 
         $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
 
-        return view('students.edit', compact('studentById', 'colleges'));
+        return view('students.edit', compact('colleges', 'studentById'));
     }
 
     public function update($id, Request $request) {
@@ -89,7 +89,7 @@ class StudentController extends Controller
         $student = Student::find($id);
         $student->update($request->all());
 
-        return redirect()->route('student.index')->with('success', 'Student updated successfully!');
+        return redirect()->route('students.index')->with('success', 'Student updated successfully!');
     }
 
     public function destroy($id) {
