@@ -21,8 +21,8 @@
             @enderror
         </div>
         <div class="form-group">
-            <button class="btn btn-action">Back to Colleges</button>
-            <button class="btn btn-success" type="submit">Submit</button>
+            <a class="btn btn-action" href="{{ route('colleges.index') }}">Back to Colleges</a>
+            <input class="btn btn-success" type="submit" value="Submit"/>
         </div>
     </div>
 </div>
