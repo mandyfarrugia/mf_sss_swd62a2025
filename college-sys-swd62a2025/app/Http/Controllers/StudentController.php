@@ -25,7 +25,7 @@ class StudentController extends Controller
     }
 
     public function create() {
-        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id');
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
         $student = new Student();
         return view('students.create', compact('colleges', 'student'));
     }
@@ -61,7 +61,9 @@ class StudentController extends Controller
             return redirect()->route('colleges.index')->with('error', 'We were unable to find a student with the ID you provided. It may be possible that the ID is incorrect or the student no longer exists in our records.');
         }
 
-        return view('students.edit', compact('studentById'));
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
+
+        return view('students.edit', compact('studentById', 'colleges'));
     }
 
     public function update($id, Request $request) {
