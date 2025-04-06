@@ -30,7 +30,19 @@ class StudentController extends Controller
         return view('students.create', compact('colleges', 'student'));
     }
 
-    public function store(Request $request) {}
+    public function store(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:students,name',
+            'phone' => 'required|max:8',
+            'dob' => 'required',
+            'college_id' => 'required|exists:colleges,id'
+        ]);
+
+        Student::create($request->all());
+        return redirect()->route('contacts.index')->with('message', 'Contact has been added successfully');
+    }
+
     public function edit($id) {}
     public function update($id, Request $request) {}
     public function destroy($id) {}
