@@ -21,6 +21,10 @@
             </div>
             <div class="page-category">
                 <h5><strong>{{ $studentById->name }}</strong></h5>
+                <p>{{ $studentById->email }}</p>
+                <p>{{ $studentById->phone }}</p>
+                <p>{{ $studentById->dob }}</p>
+                <p>{{ $studentById->college->name }}</p>
             </div>
         </div>
     </div>

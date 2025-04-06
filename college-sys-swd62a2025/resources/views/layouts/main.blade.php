@@ -119,12 +119,12 @@
                             <div class="collapse" id="students">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="components/avatars.html">
+                                        <a href="{{ route('students.index') }}">
                                             <span class="sub-item">View all Students</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="components/buttons.html">
+                                        <a href="{{ route('students.create') }}">
                                             <span class="sub-item">Add new Student</span>
                                         </a>
                                     </li>
