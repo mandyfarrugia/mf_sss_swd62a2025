@@ -39,7 +39,7 @@
                                                             class="btn btn-action btn-sm">
                                                             <i class="fa-regular fa-pen-to-square"></i>
                                                         </a>
-                                                        <a class="btn btn-danger btn-delete btn-sm">
+                                                        <a href="{{ route('colleges.destroy', $college->id) }}" class="btn btn-danger btn-delete btn-sm">
                                                             <i class="fa-regular fa-circle-xmark"></i>
                                                         </a>
                                                     </div>
