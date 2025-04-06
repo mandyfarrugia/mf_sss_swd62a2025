@@ -26,7 +26,7 @@
                             <div class="card-title">Register a new college</div>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('colleges.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('colleges.store') }}" method="post">
                                 @csrf
                                 @include('colleges._create_form')
                             </form>

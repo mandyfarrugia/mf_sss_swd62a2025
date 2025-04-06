@@ -26,8 +26,9 @@
                             <div class="card-title">Edit existing college</div>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('colleges.update', $collegeById->id) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('colleges.update', $collegeById->id) }}" method="post">
                                 @csrf
+                                @method('PUT')
                                 @include('colleges._edit_form')
                             </form>
                         </div>
