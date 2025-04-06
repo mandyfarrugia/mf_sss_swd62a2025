@@ -15,7 +15,7 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Add new college</a>
+                        <a href="#">Edit college</a>
                     </li>
                 </ul>
             </div>
