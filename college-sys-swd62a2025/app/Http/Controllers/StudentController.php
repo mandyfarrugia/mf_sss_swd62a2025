@@ -34,7 +34,7 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:students,name',
-            'phone' => 'required|numeric|max:8',
+            'phone' => 'required|digits:8',
             'dob' => 'required',
             'college_id' => 'required|exists:colleges,id'
         ], 
@@ -44,8 +44,7 @@ class StudentController extends Controller
             'email.email' => 'Please enter the email address in the correct format!',
             'email.unique' => 'This email is already associated with another student!',
             'phone.required' => 'Please enter a phone number!',
-            'phone.numeric' => 'Phone number must be in numeric format!',
-            'phone.max' => 'Please make sure that the phone number comprosises of 8 digits!',
+            'phone.digits' => 'Please make sure that the phone number comprosises of 8 digits!',
             'dob.required' => 'Please make sure to enter the date of birth!',
             'college_id.required' => 'Please select a college!',
             'college_id.exists' => 'The selected college does not exist!'
@@ -71,7 +70,7 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:students,name,' . $id,
-            'phone' => 'required|numeric|max:8',
+            'phone' => 'required|digits:8',
             'dob' => 'required',
             'college_id' => 'required|exists:colleges,id'
         ], 
@@ -81,8 +80,7 @@ class StudentController extends Controller
             'email.email' => 'Please enter the email address in the correct format!',
             'email.unique' => 'This email is already associated with another student!',
             'phone.required' => 'Please enter a phone number!',
-            'phone.numeric' => 'Phone number must be in numeric format!',
-            'phone.max' => 'Please make sure that the phone number comprosises of 8 digits!',
+            'phone.digits' => 'Please make sure that the phone number comprosises of 8 digits!',
             'dob.required' => 'Please make sure to enter the date of birth!',
             'college_id.required' => 'Please select a college!',
             'college_id.exists' => 'The selected college does not exist!'
