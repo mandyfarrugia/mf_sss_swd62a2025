@@ -14,6 +14,9 @@
                             <div class="col-md-4 col-sm-12 mt-2">
                                 @include('students._filter_students_college')
                             </div>
+                            <div class="col-md-4 col-sm-12 mt-3 mb-0">
+                                @include('students._sort_student_name')
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
