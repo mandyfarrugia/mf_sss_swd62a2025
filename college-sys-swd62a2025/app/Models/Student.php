@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
-/* Through the development of this Laravel application, the developer will not interact directly with the database 
-to commit transactions (in this case, to perform CRUD operations on the Students table).
+/* In fulfillment of Branch 7 - Eloquent ORM. 
+ *Through the development of this Laravel application, the developer will not interact directly with the database 
+ * to commit transactions (in this case, to perform CRUD operations on the Students table).
  * Therefore, the Student model class will serve as an intermediary to enroll students, as well as modify and deleting existing students. */
 class Student extends Model
 {

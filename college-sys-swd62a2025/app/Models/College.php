@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Model;
 
-/* Dealing with the database directly is generally considered bad practice.
+/* In fulfillment of Branch 7 - Eloquent ORM.
+ * Dealing with the database directly is generally considered bad practice.
  * In order to commit transactions (in this case, to perform CRUD operations on the Colleges table).
  * Therefore, the College model class will serve as an intermediary to add new colleges, as well as modify and delete existing colleges. */
 class College extends Model
