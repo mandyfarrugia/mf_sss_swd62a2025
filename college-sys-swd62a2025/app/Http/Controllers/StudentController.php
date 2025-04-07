@@ -9,9 +9,15 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function index() {
-        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
-        $students = Student::all();
-        return view('students.index', compact('colleges', 'students'));
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '0');
+        
+        if(!request('college_id')) {
+            $students = Student::all();
+        } else {
+            $students = Student::where('college_id', request('college_id'))->get();
+        }
+
+        return view('students.index', compact('students', 'colleges'));
     }
 
     public function show($id) {
