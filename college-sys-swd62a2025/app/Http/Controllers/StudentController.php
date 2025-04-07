@@ -45,7 +45,7 @@ class StudentController extends Controller
             'email.unique' => 'This email is already associated with another student!',
             'phone.required' => 'Please enter a phone number!',
             'phone.numeric' => 'Phone number must be in numeric format!',
-            'phone.max' => 'Please make sure that the phone number is in the correct format!',
+            'phone.max' => 'Please make sure that the phone number comprosises of 8 digits!',
             'dob.required' => 'Please make sure to enter the date of birth!',
             'college_id.required' => 'Please select a college!',
             'college_id.exists' => 'The selected college does not exist!'
@@ -82,7 +82,7 @@ class StudentController extends Controller
             'email.unique' => 'This email is already associated with another student!',
             'phone.required' => 'Please enter a phone number!',
             'phone.numeric' => 'Phone number must be in numeric format!',
-            'phone.max' => 'Please make sure that the phone number is in the correct format!',
+            'phone.max' => 'Please make sure that the phone number comprosises of 8 digits!',
             'dob.required' => 'Please make sure to enter the date of birth!',
             'college_id.required' => 'Please select a college!',
             'college_id.exists' => 'The selected college does not exist!'
