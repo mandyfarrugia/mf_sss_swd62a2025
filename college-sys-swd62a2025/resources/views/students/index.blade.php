@@ -2,6 +2,15 @@
 @section('content')
     <div class="container">
         <div class="page-inner">
+            @if($message = session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ $message }}
+                </div>
+            @elseif($message = session('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+            @endif
             <div class="page-header">
                 <div class="card w-100">
                     <div class="card-header">
@@ -41,10 +50,12 @@
                                                             class="btn btn-action btn-sm">
                                                             <i class="fa-regular fa-eye"></i>
                                                         </a>
-                                                        <a class="btn btn-action btn-sm" href="{{ route('students.edit', $student->id) }}">
+                                                        <a class="btn btn-action btn-sm"
+                                                            href="{{ route('students.edit', $student->id) }}">
                                                             <i class="fa-regular fa-pen-to-square"></i>
                                                         </a>
-                                                        <a class="btn btn-danger btn-delete btn-sm" href="{{ route('students.destroy', $student->id) }}">
+                                                        <a class="btn btn-danger btn-delete btn-sm"
+                                                            href="{{ route('students.destroy', $student->id) }}">
                                                             <i class="fa-regular fa-circle-xmark"></i>
                                                         </a>
                                                     </div>
