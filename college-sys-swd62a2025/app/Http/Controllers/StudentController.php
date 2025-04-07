@@ -89,7 +89,7 @@ class StudentController extends Controller
         $student = Student::find($id);
         $student->update($request->all());
 
-        return redirect()->route('student.index')->with('success', 'Student updated successfully!');
+        return redirect()->route('students.index')->with('success', 'Student updated successfully!');
     }
 
     public function destroy($id) {
