@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function index() {
-        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id');
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
         $students = Student::all();
         return view('students.index', compact('colleges', 'students'));
     }

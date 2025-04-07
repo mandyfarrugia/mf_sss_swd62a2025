@@ -11,6 +11,13 @@
                                 <i class="fa-solid fa-plus"></i>
                                 <span>Add</span>
                             </a>
+<<<<<<< HEAD
+=======
+                            <div class="col-sm-3 mt-2">
+                                <label for="college_id">Filter students by college</label>
+                                @include('students._filter_students_college')
+                            </div>
+>>>>>>> b3-controllers
                         </div>
                     </div>
                     <div class="card-body">
@@ -36,7 +43,11 @@
                                                 <td>{{ $student->dob }}</td>
                                                 <td>{{ $student->college->name }}</td>
                                                 <td>
+<<<<<<< HEAD
                                                     <div class="btn-group w-100" role="group" aria-label="Basic example">
+=======
+                                                    <div class="btn-group w-100" role="group">
+>>>>>>> b3-controllers
                                                         <a href="{{ route('students.show', $student->id) }}"
                                                             class="btn btn-action btn-sm">
                                                             <i class="fa-regular fa-eye"></i>
@@ -51,9 +62,15 @@
                                                 </td>
                                             </tr>
                                         @endforeach
+<<<<<<< HEAD
                                         <form id="entity-delete-form" method="POST">
                                             @method('DELETE')
                                             @csrf
+=======
+                                        <form id="entity-delete-form" method="post">
+                                            @csrf
+                                            @method('DELETE')
+>>>>>>> b3-controllers
                                         </form>
                                     </tbody>
                                 </table>
