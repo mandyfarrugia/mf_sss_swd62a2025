@@ -28,7 +28,7 @@ class CollegeController extends Controller
             'address.required' => 'Please enter a valid address!',
         ]);
 
-        College::create($request->all());
+        College::create($request->all()); //Persist new college to the database.
         return redirect()->route('colleges.index')->with('success', 'College added successfully');
     }
 
