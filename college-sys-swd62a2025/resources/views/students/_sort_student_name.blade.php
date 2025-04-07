@@ -1,4 +1,3 @@
-<p>
-    <span><i class="fa-solid fa-sort"></i></span>
-    <span class="px-2">Sort by name</span>
-</p>
+<button id="sort_btn" class="btn btn-action">
+    Sort by name in <?= request('name_order') === 'desc' ? 'ascending' : 'descending' ?> order
+</button>

@@ -17,6 +17,15 @@ class StudentController extends Controller
             $students = Student::where('college_id', request('college_id'))->get();
         }
 
+        if(!request('name_order')) {
+            $students = Student::all();
+        } else {
+            if(request('name_order') == 'asc')
+                $students = Student::orderBy('name', 'asc')->get();
+            else if(request('name_order') == 'desc')
+                $students = Student::orderBy('name', 'desc')->get();
+        }
+
         return view('students.index', compact('students', 'colleges'));
     }
 
