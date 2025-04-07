@@ -11,6 +11,10 @@
                                 <i class="fa-solid fa-plus"></i>
                                 <span>Add</span>
                             </a>
+                            <div class="col-sm-3 mt-2">
+                                <label for="college_id">Filter students by college</label>
+                                @include('students._filter_students_college')
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">

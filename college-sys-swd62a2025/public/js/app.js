@@ -8,9 +8,7 @@ handleButtonDeletion = (event) => {
     }
 }
 
-attachEvent = (target, event, callback) => {
-    target.addEventListener(event, callback);
-}
+attachEvent = (target, event, callback) => target.addEventListener(event, callback);
 
 attachEvent(window, 'load', () => {
     const deleteBtns = document.querySelectorAll('.btn-delete');
