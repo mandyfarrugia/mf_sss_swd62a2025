@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CollegeController extends Controller
 {
     public function index()  {
-        $colleges = College::orderBy('name', 'asc')->get();
+        $colleges = College::orderBy('name', 'asc')->get(); //Get a list of colleges in ascending order.
         return view('colleges.index', compact('colleges'));
     }
 
@@ -18,6 +18,7 @@ class CollegeController extends Controller
     }
 
     public function store(Request $request) {
+        //Validation rules that user must follow to successfully enter a new college.
         $request->validate([
             'name' => 'required|unique:colleges,name',
             'address' => 'required'
@@ -53,6 +54,7 @@ class CollegeController extends Controller
     }
 
     public function update($id, Request $request) {
+        //Validation rules that user must follow to successfully update an existing college.
         $request->validate([
             'name' => 'required|unique:colleges,name,' . $id,
             'address' => 'required'

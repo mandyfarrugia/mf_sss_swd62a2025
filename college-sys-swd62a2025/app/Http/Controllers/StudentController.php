@@ -89,6 +89,7 @@ class StudentController extends Controller
     }
 
     public function update($id, Request $request) {
+        //Validation rules that user must follow to successfully update an existing student.
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:students,name,' . $id,
