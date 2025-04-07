@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function index() {
-        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '0');
         
         if(!request('college_id')) {
             $students = Student::all();
@@ -17,7 +17,7 @@ class StudentController extends Controller
             $students = Student::where('college_id', request('college_id'))->get();
         }
 
-        return view('students.index', compact('colleges', 'students'));
+        return view('students.index', compact('students', 'colleges'));
     }
 
     public function show($id) {
@@ -31,7 +31,7 @@ class StudentController extends Controller
     }
 
     public function create() {
-        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '0');
         $student = new Student();
         return view('students.create', compact('colleges', 'student'));
     }
@@ -67,7 +67,7 @@ class StudentController extends Controller
             return redirect()->route('students.index')->with('error', 'We were unable to find a student with the ID you provided. It may be possible that the ID is incorrect or the student no longer exists in our records.');
         }
 
-        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
+        $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '0');
 
         return view('students.edit', compact('colleges', 'studentById'));
     }

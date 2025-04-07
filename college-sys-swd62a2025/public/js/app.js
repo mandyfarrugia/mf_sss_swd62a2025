@@ -1,6 +1,5 @@
 handleFilterByCollegeId = (event) => {
-    event.preventDefault();
-    let selectedCollegeId = event.target.value || event.target.options[event.target.selectedIndex].value;
+    let selectedCollegeId = event.target.value;
     window.location.href = window.location.href.split('?')[0] + '?college_id=' + selectedCollegeId;
 };
 
