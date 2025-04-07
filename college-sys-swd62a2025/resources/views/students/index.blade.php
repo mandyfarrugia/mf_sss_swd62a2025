@@ -36,7 +36,7 @@
                                                 <td>{{ $student->dob }}</td>
                                                 <td>{{ $student->college->name }}</td>
                                                 <td>
-                                                    <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                                    <div class="btn-group w-100" role="group">
                                                         <a href="{{ route('students.show', $student->id) }}"
                                                             class="btn btn-action btn-sm">
                                                             <i class="fa-regular fa-eye"></i>
@@ -51,9 +51,9 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-                                        <form id="entity-delete-form" method="POST">
-                                            @method('DELETE')
+                                        <form id="entity-delete-form" method="post">
                                             @csrf
+                                            @method('DELETE')
                                         </form>
                                     </tbody>
                                 </table>

@@ -1,7 +1,7 @@
 handleButtonDeletion = (event) => {
     event.preventDefault();
     if (confirm("Are you sure you want to delete this entity?")) {
-        let action = this.getAttribute('href');
+        let action = event.target.getAttribute('href');
         let form = document.getElementById('entity-delete-form');
         form.setAttribute('action', action);
         form.submit();
