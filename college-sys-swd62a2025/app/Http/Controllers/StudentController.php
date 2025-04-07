@@ -34,7 +34,7 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:students,name',
-            'phone' => 'required|max:8',
+            'phone' => 'required|numeric|max:8',
             'dob' => 'required',
             'college_id' => 'required|exists:colleges,id'
         ], 
@@ -44,6 +44,7 @@ class StudentController extends Controller
             'email.email' => 'Please enter the email address in the correct format!',
             'email.unique' => 'This email is already associated with another student!',
             'phone.required' => 'Please enter a phone number!',
+            'phone.numeric' => 'Phone number must be in numeric format!',
             'phone.max' => 'Please make sure that the phone number is in the correct format!',
             'dob.required' => 'Please make sure to enter the date of birth!',
             'college_id.required' => 'Please select a college!',
@@ -70,7 +71,7 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:students,name,' . $id,
-            'phone' => 'required|max:8',
+            'phone' => 'required|numeric|max:8',
             'dob' => 'required',
             'college_id' => 'required|exists:colleges,id'
         ], 
@@ -80,6 +81,7 @@ class StudentController extends Controller
             'email.email' => 'Please enter the email address in the correct format!',
             'email.unique' => 'This email is already associated with another student!',
             'phone.required' => 'Please enter a phone number!',
+            'phone.numeric' => 'Phone number must be in numeric format!',
             'phone.max' => 'Please make sure that the phone number is in the correct format!',
             'dob.required' => 'Please make sure to enter the date of birth!',
             'college_id.required' => 'Please select a college!',
