@@ -12,7 +12,6 @@
                                 <span>Add</span>
                             </a>
                             <div class="col-md-4 col-sm-12 mt-2">
-                                <label for="college_id">Filter students by college</label>
                                 @include('students._filter_students_college')
                             </div>
                         </div>

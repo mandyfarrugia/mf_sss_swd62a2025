@@ -10,7 +10,13 @@ class StudentController extends Controller
 {
     public function index() {
         $colleges = College::orderBy('name', 'asc')->pluck('name', 'id')->prepend('All colleges', '');
-        $students = Student::all();
+        
+        if(!request('college_id')) {
+            $students = Student::all();
+        } else {
+            $students = Student::where('college_id', request('college_id'))->get();
+        }
+
         return view('students.index', compact('colleges', 'students'));
     }
 
